@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Egg Farm</title>
+
+<!-- Premium Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+    }
+    body {
+        background: #f5f5f5;
+        color: #333;
+    }
+
+    /* HEADER */
+    header {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.7);
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        backdrop-filter: blur(5px);
+    }
+    header h1 {
+        color: #ffeb3b;
+        font-size: 26px;
+        font-weight: 600;
+    }
+    nav a {
+        color: white;
+        margin-left: 25px;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 300;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: #ffeb3b;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        background: url('images/farm.png') center/cover no-repeat;
+        height: 90vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        padding: 0 20px;
+        position: relative;
+    }
+    .hero::after {
+        content: "";
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 700px;
+    }
+    .hero-content h2 {
+        font-size: 48px;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    .hero-content p {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    .hero-content a {
+        background: #ffeb3b;
+        padding: 12px 30px;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 5px;
+        color: black;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+    .hero-content a:hover {
+        background: white;
+    }
+
+    /* SECTION */
+    section {
+        padding: 60px 40px;
+        max-width: 1200px;
+        margin: auto;
+    }
+    section h2 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .about {
+        font-size: 19px;
+        line-height: 32px;
+        text-align: center;
+        max-width: 900px;
+        margin: auto;
+    }
+
+    /* PRODUCTS GRID */
+    .grid {
+        margin-top: 40px;
+        display: grid;
+        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Make entire card clickable */
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: 0.3s;
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+    .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    .card h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+
+    /* CONTACT SECTION */
+    .contact-box {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+        text-align: center;
+        max-width: 600px;
+        margin: auto;
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .contact-box a {
+        display: inline-block;
+        margin-top: 15px;
+        background: green;
+        color: white;
+        padding: 12px 25px;
+        font-size: 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    /* FLOATING WHATSAPP BUTTON */
+    .floating-whatsapp {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        background: #25D366;
+        padding: 18px;
+        border-radius: 50%;
+        box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+    .floating-whatsapp img {
+        width: 35px;
+    }
+
+    footer {
+        background: black;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Premium Egg Farm</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#eggs">Products</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <div class="hero-content">
+        <h2>Fresh, Premium & Farm-Raised Eggs</h2>
+        <p>We supply the highest quality eggs — Sonali, Country, Kadaknath, Quail & Fertile eggs.</p>
+        <a href="#eggs">Explore Products</a>
+    </div>
+</div>
+
+<section id="about">
+    <h2>About Our Farm</h2>
+    <p class="about">
+        We are a premium egg farm delivering clean, fresh, and nutritious eggs every day.
+        Our farm focuses on quality, hygiene, and natural feeding methods to ensure 
+        the healthiest eggs for your family and business.
+    </p>
+</section>
+
+<section id="eggs">
+    <h2>Our Egg Collection</h2>
+
+    <div class="grid">
+
+        <a href="C:\Users\ADMIN\Desktop\farm\sonali.html" class="card">
+            <h3>Sonali Eggs</h3>
+            <p>Premium-quality fresh eggs.</p>
+        </a>
+
+        <a href="LINK2" class="card">
+            <h3>Country (Desi) Eggs</h3>
+            <p>Natural & highly nutritious.</p>
+        </a>
+
+        <a href="LINK3" class="card">
+            <h3>Fertile / Hatching Eggs</h3>
+            <p>Perfect for incubation & breeding.</p>
+        </a>
+
+        <a href="LINK4" class="card">
+            <h3>White Eggs</h3>
+            <p>Fresh daily-consumption eggs.</p>
+        </a>
+
+        <a href="LINK5" class="card">
+            <h3>Kadaknath Eggs</h3>
+            <p>Protein-rich, large & tasty.</p>
+        </a>
+
+        <a href="LINK6" class="card">
+            <h3>Quail Eggs</h3>
+            <p>Small but super-nutritious eggs.</p>
+        </a>
+
+        <a href="LINK7" class="card">
+            <h3>Duck Eggs</h3>
+            <p>Large, rich & healthy eggs.</p>
+        </a>
+
+        <a href="LINK8" class="card">
+            <h3>Turkey Eggs</h3>
+            <p>Rare, nutritious & large eggs.</p>
+        </a>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+
+    <div class="contact-box">
+        <p><b>Phone:</b> +91 9524567485</p>
+        <p><b>Location:</b> Your Farm Location</p>
+
+        <a href="https://wa.me/919524567485">Chat on WhatsApp</a>
+    </div>
+</section>
+
+<a class="floating-whatsapp" href="https://wa.me/919524567485">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
+
+<footer>
+    © 2025 Premium Egg Farm – All Rights Reserved.
+</footer>
+
+</body>
+</html>
